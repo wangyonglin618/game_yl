@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+        <meta http-equiv="expires" content="-1">
+        <title>Spot the DEAL-BREAKER</title>
+        <link rel="stylesheet" type="text/css" href="css/m.min.css">
+    </head>
+    <body>
+        <div id="container">
+
+        </div>
+        <script type="text/javascript">
+			
+			function toIndex(){
+				window.location.href="../game.html";
+			}
+			
+			
+            var mebtnopenurl = 'http://game2.id87.com';
+            window.shareData = {
+                "imgUrl": "http://game2.id87.com/games/icon/qmxzfzm.png",
+                "timeLineLink": "http://game2.id87.com/games/qmxzfzm/index.html",
+                "tTitle": "",
+                "tContent": ""
+            };
+
+            function goHome() {
+                window.location = mebtnopenurl;
+            }
+            function clickMore() {
+                if ((window.location + "").indexOf("zf", 1) > 0) {
+                    window.location = "http://game2.id87.com";
+                }
+                else {
+                    goHome();
+                }
+            }
+            function dp_share() {
+                document.title = "You have " + (myData.score) + " times";
+                document.getElementById("share").style.display = "";
+                window.shareData.tTitle = document.title;
+            }
+            function dp_Ranking() {
+                window.location = mebtnopenurl;
+            }
+
+            function showAd() {
+            }
+            function hideAd() {
+            }
+            document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+                WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+                    WeixinJSBridge.invoke('sendAppMessage', {
+                        "img_url": window.shareData.imgUrl,
+                        "link": window.shareData.timeLineLink,
+                        "desc": window.shareData.tContent,
+                        "title": window.shareData.tTitle
+                    }, onShareComplete);
+                });
+
+                WeixinJSBridge.on('menu:share:timeline', function(argv) {
+                    WeixinJSBridge.invoke('shareTimeline', {
+                        "img_url": window.shareData.imgUrl,
+                        "img_width": "640",
+                        "img_height": "640",
+                        "link": window.shareData.timeLineLink,
+                        "desc": window.shareData.tContent,
+                        "title": window.shareData.tTitle
+                    }, onShareComplete);
+                });
+            }, false);
+            var myData = {gameid: "qmxzfzm"};
+            window.shareData.timeLineLink = "http://game2.id87.com/";
+            function dp_submitScore(score) {
+				var thispoint=0;
+				debugger;
+				if(Number(score)>30){
+					thispoint=300;
+					if(sessionStorage.getItem('finddadpoint')!=null){
+						var point=sessionStorage.getItem('finddadpoint');
+						var totalpoint=Number(point)+300;
+						sessionStorage.setItem('finddadpoint',totalpoint);
+							
+					}else{
+						sessionStorage.setItem('finddadpoint','300');
+					}
+					
+				}
+				
+                myData.score = parseInt(score);
+                myData.scoreName = "Successfully found " + score + " times";
+                if (score > 1) {
+                    if (confirm("You have successfully found outliers " + score + " times, and earned "+thispoint+" points, congratulations!")) {
+                        dp_share();
+                    }
+                }
+            }
+            function onShareComplete(res) {
+                if (localStorage.myuid && myData.score != undefined) {
+                    setTimeout(function() {
+                        if (confirm("do you")) {
+                            window.location = "http://games.vdcomm.cn";
+                        }
+                        else {
+                            document.location.href = mebtnopenurl;
+                        }
+                    }, 500);
+                }
+                else {
+                    document.location.href = mebtnopenurl;
+                }
+            }
+        </script>
+    </body>
+</html>
+<script id="tpl" type="text/html">
+    <div class="grid">
+        <div class="page hide" id="loading">
+            <div class="loading-txt"><%=loading%></div>
+        </div>
+        <div class="page hide" id="index">
+            <h1><%=title%></h1>
+
+            <div id="help"><%=help_txt%></div>
+            <div class="btns">
+                <button data-type="color" class="btn play-btn">
+                    <%=btn_start%>
+                </button>
+                <a href="javascript:void(0);"  onclick="clickMore();" class="btn btn-boyaa">
+                    <%=btn_more_game%>
+                </a>
+            </div>
+        </div>
+        <div class="page hide" id="room">
+            <header>
+                <span class="lv">
+                    <%=score%>
+                    <em>
+                        1
+                    </em>
+                </span>
+                <span class="time">
+                </span>
+                <!-- <span class="btn btn-pause">
+                     <%=btn_pause%>
+                 </span>
+                -->
+            </header>
+            <div id="box" class="lv1">
+            </div>
+        </div>
+        <div class="page hide" id="dialog">
+            <div class="inner">
+                <div class="content gameover">
+                    <div class="inner-content">
+
+                        <h3></h3>
+                        <div class="btn-wrap">
+                            <button class="btn btn-restart">
+                                <%=btn_reTry%>
+                            </button>
+							
+							<button class="btn btn-boyaa" onclick="toIndex()">
+								Back to Menu
+							</button>
+							
+                            <a href="javascript:void(0);" onclick="clickMore();" class="btn btn-boyaa">
+                                <%=btn_more_game%>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="content pause">
+                    <div class="inner-content">
+
+                        <h3>
+                            <%=game_pause%>
+                        </h3>
+                        <div class="btn-wrap">
+                            <button class="btn btn-resume">
+                                <%=btn_resume%>
+                            </button>
+                            <a href="javascript:void(0);" onclick="clickMore();" class="btn btn-boyaa">
+                                <%=btn_more_game%>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </ins>
+        </div>
+    </div>
+    <div id=share style="display: none">
+        <img width=100% src="http://game2.id87.com/games/share.png"
+             style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
+             ontouchstart="document.getElementById('share').style.display='none';" />
+    </div>
+</script>
+<script src="js/libs.min.js"></script>
+<script src="js/main.min3.js"></script>

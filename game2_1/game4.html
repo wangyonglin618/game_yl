@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <title>Spot the deal breaker</title>
+        <style>
+            #customers {
+                margin: 0 auto;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                width:60%;
+                height: 100%;
+                border-collapse: collapse;
+            }
+
+            #customers td,
+            #customers th {
+                line-height: 20px;
+                border: 3px solid #ffffff;
+                padding: 3px 8px 2px 8px;
+                text-align: center;
+            }
+
+            .tdth
+             {
+                border: 1px solid #ffffff;
+                padding: 0px 0px 0px 2px;
+                text-align: center;
+    
+                }
+
+            #customers th {
+                font-size: 0.9em;
+                text-align: left;
+                padding-top: 5px;
+                padding-bottom: 4px;
+                background-color: #14197f;
+                color: #ffffff;
+            }
+            
+            .th2 {
+                font-size: 0.9em;
+                text-align: left;
+                padding-top: 5px;
+                /* padding-bottom: 4px; */
+                background-color: #14197f;
+                color: #ffffff;
+            }
+
+            #customers td {
+                font-size: 0.5em;
+                background-color: #eaf2f5;
+                font-weight: bold;
+                
+            }
+
+            #customers .thys {
+                width: 15%;
+                text-align: center;
+            }
+            #customers .textleft{
+                text-align: left;
+            }
+            #customers .textrigth{
+                text-align: right;
+            }
+            .ycys{
+                    display: none;
+                }
+            .ztys{
+                color: #ff0000;
+            }
+            .time-item {
+                text-align: center;
+                color: #55ff7f;
+            }
+        </style>
+    </head>
+
+    <body style="background-color:  rgb(100,181,199);">
+        <div  style="text-align: center;">
+            <p id="zt1" style="font-weight: bold;">GAME 2:<br>
+SPOT THE"DEAL-BREAKER”</p>
+<p id = "zt2">Click on the cells to identify the 5 weird looking data
+(e.g. data quality issues such as incomplete records / duplicated records / inconsistent data format)
+</p>
+        </div>
+            
+    
+        <table id="customers">
+            <tr>
+                <th class="thys">Entity ID Type</th>
+                <th class="thys">ID</th>
+                <th class="thys">Creation <br> Date</th>
+                <th class="thys">Contact</th>
+                <th class="thys">Country</th>
+            </tr>
+            <tr>
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X0000367J</td>
+                <td class="textrigth">14/3/2004</td>
+                <td class="textrigth">16</td>
+                <td>Active</td>
+            </tr>
+            <tr class="alt">
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X0000628F</td>
+                <td class="textrigth">2/7/1995</td>
+                <td class="textrigth">25</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td class="textleft">NRIC</td>
+                <td class="textleft">Y0000718F</td>
+                <td class="textrigth">2/7/1998</td>
+                <td class="textrigth" id="mochu4">twnty-two</td>
+                <img id="img4" class="ycys" src="../game4/img/qq.png" style="position: fixed;top:5%;left: 68%;width:30%;" />
+                <td>Active</td>
+            </tr>
+            <tr class="alt">
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X0000093A</td>
+                <td class="textrigth">19/10/1991</td>
+                <td class="textrigth">29</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td class="textleft">FIN</td>
+                <td class="textleft">G0000572N</td>
+                <td class="textrigth">|/4/2014</td>
+                <td class="textrigth">6</td>
+                <td>Active</td>
+            </tr>
+            <tr class="alt">
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X0000829G</td>
+                <td class="textrigth">2/1/2002</td>
+                <td class="textrigth">18</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X0000009Z</td>
+                <td class="textrigth">22/3/1996</td>
+                <td class="textrigth">24</td>
+                <td>Active</td>
+            </tr>
+            <tr class="alt">
+                <td class="textleft">FIN</td>
+                <td class="textleft" id="mochu1"></td>
+                <img id="img1" class="ycys" src="../game4/img/qq.png" style="position: fixed;top:16.5%;left: 24.5%;width: 30%;" />
+                <td class="textrigth">4/2/2004</td>
+                <td class="textrigth">16</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X0000987H</td>
+                <td class="textrigth">5/4/2012</td>
+                <td class="textrigth">8</td>
+                <td>Active</td>
+            </tr>
+            <tr class="alt">
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X0000398J</td>
+                <td class="textrigth">5/4/2012</td>
+                <td class="textrigth">15</td>
+                <td>Active</td>
+            </tr>
+            <tr class="alt">
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X0000228F</td>
+                <td class="textrigth">5/3/1999</td>
+                <td class="textrigth">21</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X000068IH</td>
+                <td class="textrigth">13/5/1997</td>
+                <td class="textrigth">23</td>
+                <td>Active</td>
+            </tr>
+            <tr class="alt">
+                <td class="textleft">FIN</td>
+                <td class="textleft">G0000476X</td>
+                <td class="textrigth" id="mochu3">41160</td>
+                <img id="img3" class="ycys" src="../game4/img/qq.png" style="position: fixed;top:29%;left: 53%;width: 30%;" />
+                <td class="textrigth">51</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X00007 191</td>
+                <td class="textrigth">3/10/1998</td>
+                <td class="textrigth">22</td>
+                <td>Active</td>
+            </tr>
+            <tr class="alt">
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X0000009Z</td>
+                <td class="textrigth">13/1/2003</td>
+                <td class="textrigth">17</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td class="textleft">FIN</td>
+                <td class="textleft">G0000718R</td>
+                <td class="textrigth">25/2/2003</td>
+                <td class="textrigth">17</td>
+                <td>Active</td>
+            </tr>
+            <tr class="alt">
+                <td class="textleft">NRIC</td>
+                <td class="textleft">X0000719Z</td>
+                <td class="textrigth">I 2/5/2004</td>
+                <td class="textrigth">16</td>
+                <td id="mochu5">Act_ ive</td>
+                <img id="img5" class="ycys" src="../game4/img/qq.png" style="position: fixed;top:39%;left: 78.5%;width: 30%;" />
+
+            </tr>
+            <tr>
+                <td class="textleft">NRIC</td>
+                <td class="textleft" id="mochu2" style="position:inherit;">&ensp; X0000788B</td>
+<img id="img2" class="ycys" src="../game4/img/qq.png"
+                     style="position: fixed;top:1502.4000244140625px;left: 8px;width: 30%;" />
+                <td class="textrigth">8/11/1999</td>
+                <td class="textrigth">21</td>
+                <td>Active</td>
+            </tr>
+        </table>
+        <div class="time-item">
+            <p id="second_show" style="font-size: 1em;">0 sec</p>
+        </div>
+
+        <script src="../jquery-1.8.3.min.js"></script>
+
+        <script language="JavaScript" type="text/javascript">
+            var intDiff = parseInt(20); //timer
+            var imw = 0;
+            var imh = 0;
+            var score =  0 ;
+            function timer(intDiff) {
+                window.setInterval(function() {
+                    var day = 0,
+                        hour = 0,
+                        minute = 0,
+                        second = 0; //时间默认值
+                    if (intDiff > 0) {
+                        day = Math.floor(intDiff / (60 * 60 * 24));
+                        hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+                        minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+                        second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+                    }
+                    if (minute <= 9) minute = '0' + minute;
+                    if (second <= 9) second = '0' + second;
+                    if (second <= 9) $("#second_show").addClass("ztys");
+                    $('#second_show').html('' + second + ' sec');
+                    intDiff--;
+                    var thispoint=0;
+                    console.log(score);
+                    if(Number(score)>=5){
+                        thispoint=300;
+                        if(sessionStorage.getItem('eyescore')!=null){
+                            sessionStorage.setItem('eyescore',thispoint);
+                                
+                        }else{
+                            sessionStorage.setItem('eyescore','300');
+                        }
+                        
+                    }
+                    if(second <= 0 || score >=5) window.location.href = "gohome.html";
+                }, 1000);
+            }
+            $(function() {
+                timer(intDiff);
+                imhw = $("#img2").width();
+                if($(window).width()<1000){
+                    if($(window).height()<=667 || $(window).width()<=299){
+                        /* border: 1px solid #ffffff;
+                padding: 0px 0px 0px 2px;
+                */
+                var mycssth = {
+                        'font-size': '0.9em',
+                        'text-align': 'left',
+                       ' padding-top': '5px',
+                        /* padding-bottom: 4px; */
+                       'background-color': '#14197f',
+                        'color': '#ffffff',
+                        border: '1px solid #ffffff',
+                        padding: '0px 0px 0px 2px',
+                            'text-align':' center',
+                        };
+                
+                var mycsstd = {
+                        /* line-height: 20px; */
+                        border:' 1px solid #ffffff',
+                        padding:' 0px 0px 0px 2px',
+                        'text-align': 'center',
+                        border: '1px solid #ffffff',
+                            padding: '0px 0px 0px 2px',
+                        'text-align': 'center',
+                        };
+                        $("#customers th").css(mycssth);
+                        $("#customers td").css(mycsstd);
+                        $("#zt1").css('font-size','2px');
+                        $("#zt2").css('font-size','1px');
+                        
+                    }
+                    
+                    
+                    $("#customers th").css('line-height','20px');
+                    $("#customers td").css('line-height','15px');
+                    $("#zt1").css('font-size','12px');
+                    $("#zt2").css('font-size','10px');
+                    
+                    
+                    
+                }
+                console.log($(window).height());
+            });
+
+            $("#mochu1").click(function(e) {
+                score = Number(score)+1
+                var y = $(this).offset().top;
+                var x = $(this).offset().left;
+                console.log(y);
+                console.log(x);
+                imw = $("#img1").width(),
+                imh= $("#img1").height(),
+                console.log(imh);
+                if($(window).width()<1000){
+                    
+                    if($(window).width()>760){
+                        
+                        
+                        $("#img1").css('top',y-(imh/5));
+                        $("#img1").css('left',x);
+                        $("#img1").css('width','15%');
+                    }else{
+                        $("#img1").css('top',y-((imh/3)+(imh/10)));
+                        $("#img1").css('left',x-(imw/5));
+                        $("#img1").css('width','30%');
+                    }
+                }else{
+                    $("#img1").css('top',y-(imh/13));
+                    $("#img1").css('left',x-(imw/50));
+                    $("#img1").css('width','5%');
+                }
+                console.log($(window).width());
+                
+                
+                
+                $("#img1").removeClass("ycys");
+                $("#mochu1").addClass("ztys");
+            });
+            
+            $("#mochu2").click(function(e) {
+                score = Number(score)+1
+                var y = $(this).offset().top;
+                var x = $(this).offset().left;
+                console.log(y);
+                console.log(x);
+                imw = $("#img2").width(),
+                imh= $("#img2").height(),
+                console.log(imh);
+                
+                if($(window).width()<1000){
+                    console.log(y-imh);
+                    if($(window).width()>760){
+                        $("#img2").css('top',y-(imh/5));
+                        $("#img2").css('left',x);
+                        $("#img2").css('width','15%');
+                    }else{
+                        $("#img2").css('top',y-((imh/5)));
+                        $("#img2").css('left',x-(imw/5));
+                        $("#img2").css('width','30%');
+                    }
+                }else{
+                    $("#img2").css('top',y-(imh/13));
+                    $("#img2").css('left',x-(imw/50));
+                    $("#img2").css('width','5%');
+                }
+                
+                
+                $("#img2").removeClass("ycys");
+                $("#mochu2").addClass("ztys");
+            });
+            
+            
+            /* var btn = document.getElementById('mochu2');
+            btn.onclick = function() {
+                $("#img2").removeClass("ycys");
+                $("#mochu2").addClass("ztys");
+            };
+             */
+            $("#mochu3").click(function(e) {
+                score = Number(score)+1
+                var y = $(this).offset().top;
+                var x = $(this).offset().left;
+                console.log(y);
+                console.log(x);
+                imw = $("#img3").width(),
+                imh= $("#img3").height(),
+                console.log(imh);
+                if($(window).width()<1000){
+                    
+                    console.log(y-imh);
+                    if($(window).width()>760){
+                        $("#img3").css('top',y-(imh/5));
+                        $("#img3").css('left',x);
+                        $("#img3").css('width','15%');
+                    }else{
+                        $("#img3").css('top',y-((imh/3)+(imh/10)));
+                        $("#img3").css('left',x-(imw/5));
+                        $("#img3").css('width','30%');
+                    }
+                    
+                    
+                }else{
+                    $("#img3").css('top',y-(imh/13));
+                    $("#img3").css('left',x+(imw/4));
+                    $("#img3").css('width','5%');
+                }
+                
+                
+                
+                $("#img3").removeClass("ycys");
+                $("#mochu3").addClass("ztys");
+            });
+            /* var btn = document.getElementById('mochu3');
+            btn.onclick = function() {
+                $("#img3").removeClass("ycys");
+                $("#mochu3").addClass("ztys");
+            }; */
+            $("#mochu4").click(function(e) {
+                score = Number(score)+1
+                var y = $(this).offset().top;
+                var x = $(this).offset().left;
+                console.log(y);
+                console.log(x);
+                imw = $("#img4").width(),
+                imh= $("#img4").height(),
+                console.log(imh);
+                if($(window).width()<1000){
+                /*     $("#img4").css('top',y-((imh/3)+(imh/10)));
+                    $("#img4").css('left',x-(imw/5));
+                    $("#img4").css('width','30%'); */
+                        
+                        if($(window).width()>760){
+                            $("#img4").css('top',y-(imh/5));
+                            $("#img4").css('left',x);
+                            $("#img4").css('width','15%');
+                        }else{
+                            $("#img4").css('top',y-((imh/3)));
+                            $("#img4").css('left',x-(imw/6));
+                            $("#img4").css('width','30%');
+                        }
+                        
+                    
+                    
+                }else{
+                    
+                    console.log("这里");
+                    console.log(x+(imw/10));
+                    $("#img4").css('top',y-(imh/15));
+                    $("#img4").css('left',x+(imw/4));
+                    $("#img4").css('width','5%');
+                }
+                $("#img4").removeClass("ycys");
+                $("#mochu4").addClass("ztys");
+            });
+            /* var btn = document.getElementById('mochu4');
+            btn.onclick = function() {
+                $("#img4").removeClass("ycys");
+                $("#mochu4").addClass("ztys");
+            }; */
+            
+            $("#mochu5").click(function(e) {
+                score = Number(score)+1
+                var y = $(this).offset().top;
+                var x = $(this).offset().left;
+                console.log(y);
+                console.log(x);
+                imw = $("#img5").width(),
+                imh= $("#img5").height(),
+                console.log(imh);
+                if($(window).width()<1000){
+                    
+                    console.log(y-imh);
+                    if($(window).width()>760){
+                        $("#img5").css('top',y-(imh/5));
+                        $("#img5").css('left',x);
+                        $("#img5").css('width','15%');
+                    }else{
+                        $("#img5").css('top',y-((imh/3)+(imh/10)));
+                        $("#img5").css('left',x-(imw/5));
+                        $("#img5").css('width','30%');
+                    }
+                    
+                }else{
+                    $("#img5").css('top',y-(imh/18));
+                    $("#img5").css('left',x+(imw/9));
+                    $("#img5").css('width','5%');
+                }
+                
+                $("#img5").removeClass("ycys");
+                $("#mochu5").addClass("ztys");
+            });
+            var btn = document.getElementById('mochu5');
+            btn.onclick = function() {
+                $("#img5").removeClass("ycys");
+                $("#mochu5").addClass("ztys");
+            };
+        </script>
+    </body>
+</html>

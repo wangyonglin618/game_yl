@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<title>Spot the "Deal-Breaker"</title>
+	</head>
+	<style>
+	</style>
+	<body style="background-color:rgb(101,181,200);">
+		
+		<div id="img1" style="text-align: center;">
+			<img alt="" src="img/index2.png" id="go" />
+		</div>
+		<script src="../jquery-1.8.3.min.js"></script>
+		<script language="JavaScript" type="text/javascript">
+				var go = document.getElementById('go');
+				go.onclick = function() {
+					//console.log("Click");
+					window.location.href = "game4.html"
+				}
+				
+				$(function(){
+					if($(window).width()<1000){
+						if($(window).width()>760){
+							$("#go").css('width',$(window).width()/2);
+							
+						}else{
+							$("#go").css('width',$(window).width());
+						}
+						
+						//$('#go').height($(window).height());
+					}else{
+						$("#go").css('border',"1px solid #fff");
+					}
+					//console.log($(window).width());
+				});
+		</script>
+
+	</body>
+
+</html>

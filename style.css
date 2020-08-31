@@ -1,0 +1,141 @@
+html{
+    font-family: 'Futura', sans-serif;
+    font-size: 4em;
+    font-size: 1em;
+    font-weight: bolder;
+    word-wrap: break-word;
+    color : rgb(87, 86, 86);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  body{
+      background-color: white;
+  }
+  .row {
+    left:0;
+    right:0;
+    margin:0 auto;
+    max-width: 40%;
+  }
+  .column {
+    float: left;
+    width: 50%;
+  }
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .speech-bubble {
+      position: relative;
+      background: lightblue;
+      max-width:250px;
+      padding:10px;
+      margin:0 auto;
+      text-align: center;
+      font-size:1em;
+      border-radius:6px;
+      animation-name: appearx;
+      animation-duration: 2s;
+
+  }
+  .speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+    border-top-color: lightblue;
+    border-bottom: 0;
+	border-right: 0;
+	margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+@keyframes appearx {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  #title {
+    font-family: Marker Felt, fantasy;
+    font-size: 30px;
+    text-align: center;
+}
+@keyframes glow {
+    from {
+      text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #3498DB , 0 0 8px #3498DB , 0 0 10px #3498DB , 0 0 12px #3498DB , 0 0 14px #3498DB ;
+    }
+    
+    to {
+      text-shadow: 0 0 4px #fff, 0 0 6px #3498DB , 0 0 10px #3498DB , 0 0 12px #3498DB , 0 0 14px #3498DB , 0 0 16px #3498DB , 0 0 20px #3498DB ;
+    }
+  }
+  .main-container{
+    position: relative;
+    padding : 5px;
+    height: 90vh;
+    top: 10%;
+    left:0;
+    right:0;
+    bottom: 0;
+    max-width: 80%;
+    margin:0 auto;
+}
+  .button{
+      font-size: 1em;
+      word-break: break-all;
+      max-width: 100%;
+      border : 2px solid rgb(87, 86, 86);
+      text-align: center;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+      padding : 5px;
+      background-color: white;
+  }
+  .button:hover{
+    border: 3px solid black ;
+    background-color: lightblue;
+    color : black ;
+}
+  #countdown {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+  #countdown-number {
+    text-align:center;
+    position: absolute;
+    line-height: 80px;
+    width: 100%;
+  }
+  svg {
+    transform: rotate(-90deg);
+}
+.circle_animation {
+  stroke-dasharray: 200; /* this value is the pixel circumference of the circle */
+  stroke-dashoffset: 200;
+  transition: all 1s linear;
+}
+  #progress{
+      width : 500px;
+      position: absolute;
+      bottom : 0px;
+      right : 0px;
+      padding:5px;
+      text-align: right;
+  }
+  .prog{
+      width : 25px;
+      height : 25px;
+      border : 2px solid rgb(87, 86, 86);
+      display: inline-block;
+      border-radius: 50%;
+      margin-left : 5px;
+      margin-right : 5px;
+  }

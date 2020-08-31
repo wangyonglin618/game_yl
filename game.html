@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Data Carnival</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link  rel="stylesheet" href="style.css">
+<audio autoplay loop>
+    <source src="http://soundimage.org/wp-content/uploads/2014/04/Fantasy_Game_Background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</head>
+
+<body>
+    <div id="menu" class="main-container" >
+        <div class="speech-bubble" id="title"> Welcome the to DATA CARNIVAL!</div>
+		<div  id="title">The points you have earned:<span style="color: #f00;" id="gametotal"> 0</span></div>
+        <div class="row">
+            <div class="column"><img src="img/player.png" alt="player" width="100%"></div>  
+            <div class="column"><img src="/img/gamemaster.png" alt="gamemaster"width="100%"></div>
+        </div>
+        <p>Select game to play.</p>
+        <div id="gamebuttons">
+            <div class="button" id="start1" onclick="startQuiz('game1')">Game 1</div>
+            <div class="button" id="start2" onclick="startQuiz('game2')">Game 2</div>
+            <div class="button" id="start3" onclick="startQuiz('game3')">Game 3</div>
+            <div class="button" id="start4" onclick="startQuiz('game3')">Game 4</div>
+            <div class="button" id="start5" onclick="startQuiz('game5')">Game 5</div>
+        </div>
+        <div id="totalscoredisplay"><p>Your total score: 0</p></div>
+  	</div>
+    <div id="game-container" style="display: none">
+    <div id="gametitle"></div><br/>
+    <div id="gameintro" class="main-container">
+        <div class="speech-bubble" id="introspeech"></div>
+        <div class="row">
+            <div class="column"><img src="img/player.png" alt="player" width="100%"></div>  
+            <div class="column"><img src="/img/gamemaster.png" alt="gamemaster"width="100%"></div>
+        </div>
+        <div class="button" id="playgame" onclick="playGame()">Play Game</div>
+    </div>
+    <div id="game" class="main-container" style="display: none">
+        <div id="question"></div>
+        <div id="countdown">
+            <div id="countdown-number"></div>
+            <svg width="80" height="80">
+                <circle id="circle" class="circle_animation" r="31.8309886" cy="40" cx="40" stroke-width="8" stroke="black" fill="none"/>
+              </svg>
+        </div>
+        <div id="progress"></div>
+    </div>
+    <div id="ending" class="main-container"  style="display: none">
+        <div id="gamescore"></div>
+        <div class="speech-bubble" id="endspeech"></div>
+        <div class="row">
+            <div class="column"><img src="img/player.png" alt="player" width="100%"></div>  
+            <div class="column"><img src="img/gamemaster.png" alt="gamemaster"width="100%"></div>
+        </div>
+        <div class='button' id='menubutton' onclick='loadMenu()'>Go back to Menu</div>
+    </div>
+    </div>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+	 <script src="jquery-1.8.3.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="script.js"></script>
+	<script language="JavaScript" type="text/javascript" >
+		$(function(){
+			debugger;
+			var totalpoint=0;
+			if(sessionStorage.getItem('finddadpoint')!=null){
+				totalpoint+=Number(sessionStorage.getItem('finddadpoint'));
+			}
+			
+			if(sessionStorage.getItem('icepailpoint')!=null){
+				totalpoint+=Number(sessionStorage.getItem('icepailpoint'));
+			}
+			$("#gametotal").html(totalpoint);
+		})
+	</script>
+</body>
+</html>

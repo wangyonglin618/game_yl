@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<title>Spot the "Deal-Breaker"</title>
+	</head>
+	<style>
+		
+	</style>
+	<body style="background-color: rgb(100,181,199);">
+		<!-- <div style="text-align: center;">
+			<img alt="" src="./img/home.png" style="margin: 0 auto;"
+			 id="go" />
+		</div> -->
+		
+		
+		<div id="img1" style="text-align: center;">
+			<img alt="" src="img/home.png" id="go" />
+		</div>
+		
+		<script src="../jquery-1.8.3.min.js"></script>
+		<script language="JavaScript" type="text/javascript">
+				var go = document.getElementById('go');
+				go.onclick = function() {
+					////////////console.log("Click");
+					window.location.href = "../game.html"
+				}
+				$(function(){
+					var f = sessionStorage.getItem('eyescore') == null?'0':sessionStorage.getItem('eyescore');
+					if(f=='0'){
+						
+						$("#go").attr('src','img/home2.png');
+						//$("#go").src();
+					}
+					if($(window).width()<1000){
+						if($(window).width()>760){
+							$("#go").css('width',$(window).width()/2);
+							
+						}else{
+							$("#go").css('width',$(window).width());
+						}
+						
+						
+						
+						//$('#go').height($(window).height());
+					  //  $('#go').width($(window).width());
+					}else{
+						//$("#go").css('margin-left',($(window).height()/2)+($(window).height()/5));
+					}
+					////////////console.log($(window).width());
+					// tc();
+				})
+				
+		</script>
+
+	</body>
+
+</html>
